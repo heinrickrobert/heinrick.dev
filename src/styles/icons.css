@@ -1,0 +1,51 @@
+
+ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+
+}
+
+.icon img{
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+/* Container que segura o ícone e o texto */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Estilo do texto que aparece embaixo */
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  
+  /* Posicionamento embaixo do ícone */
+  position: absolute;
+  top: 100%; /* Fica um pouco abaixo do ícone */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o texto */
+  
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  transition: opacity 0.3s; /* Efeito suave ao aparecer */
+  z-index: 10;
+}
+
+/* Mostra o texto quando passa o mouse por cima do container */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
